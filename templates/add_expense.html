@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Expense</title>
+    
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:40px;
+}
+
+/* Header */
+
+header{
+    width:100%;
+    max-width:700px;
+    background:white;
+    padding:20px;
+    text-align:center;
+    border-radius:12px;
+    box-shadow:0px 0px 15px rgba(0,0,0,0.15);
+    margin-bottom:30px;
+}
+
+header h1{
+    color:#2563eb;
+}
+
+/* Card */
+
+.card{
+    width:100%;
+    max-width:700px;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0px 0px 15px rgba(0,0,0,0.15);
+}
+
+/* Heading */
+
+.card h2{
+    text-align:center;
+    color:#333;
+    margin-bottom:10px;
+}
+
+.card p{
+    text-align:center;
+    color:gray;
+    margin-bottom:25px;
+}
+
+/* Labels */
+
+label{
+    font-weight:bold;
+    color:#333;
+}
+
+/* Input, Select, Textarea */
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:12px;
+    margin-top:8px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+}
+
+textarea{
+    resize:none;
+}
+
+/* Focus Effect */
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:#2563eb;
+    outline:none;
+}
+
+/* Save Button */
+
+button{
+    width:100%;
+    padding:14px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+/* Back Link */
+
+a{
+    display:block;
+    text-align:center;
+    margin-top:20px;
+    text-decoration:none;
+    color:#2563eb;
+    font-weight:bold;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>💰 Smart Expense Tracker</h1>
+    </header>
+
+    <!-- Expense Form Card -->
+    <div class="card">
+
+        <h2>Add New Expense</h2>
+        <p>Add your daily expenses here.</p>
+
+        <form action="/add-expense" method="post">
+
+            <!-- Category -->
+            <label for="category">Category</label><br>
+            <select id="category" name="category">
+                <option value="" selected disabled>Select Category</option>
+                <option value="Food">Food</option>
+                <option value="Travel">Travel</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Education">Education</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Health">Health</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <br><br>
+
+            <!-- Amount -->
+            <label for="amount">Amount (₹)</label><br>
+            <input
+                type="number"
+                id="amount"
+                name="amount"
+                placeholder="Enter Amount"
+                required
+            >
+
+            <br><br>
+
+            <!-- Date -->
+            <label for="date">Date</label><br>
+            <input
+                type="date"
+                id="date"
+                name="date"
+                required
+            >
+
+            <br><br>
+
+            <!-- Description -->
+            <label for="description">Description</label><br>
+            <textarea
+                id="description"
+                name="description"
+                rows="5"
+                placeholder="Enter Description"
+            ></textarea>
+
+            <br><br>
+
+            <!-- Save Button -->
+            <button type="submit">
+                 Save Expense
+            </button>
+
+        </form>
+
+        <br>
+
+        <a href="/dashboard">← Back to Dashboard</a>
+
+    </div>
+
+</body>
+</html>

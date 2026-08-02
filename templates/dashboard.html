@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    padding:30px;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0px 0px 15px rgba(0,0,0,0.15);
+    margin-bottom:30px;
+}
+
+header h1{
+    color:#2563eb;
+}
+
+header button{
+    background:red;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+header button:hover{
+    background:darkred;
+}
+
+/* Dashboard Heading */
+
+h2{
+    margin-bottom:20px;
+    margin-top: 20px;
+}
+
+/* Cards */
+
+.cards{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    margin-bottom:30px;
+}
+
+.card{
+    flex:1;
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0px 0px 15px rgba(0,0,0,0.15);
+}
+
+.card h3{
+    color:#555;
+    margin-bottom:15px;
+}
+
+.card p{
+    font-size:28px;
+    color:#2563eb;
+    font-weight:bold;
+}
+
+/* Add Expense Button */
+
+.add-btn{
+
+    background:#2563eb;
+    color:white;
+    border:2px solid black;
+    padding:18px 30px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    margin-bottom:30px;
+    
+}
+
+.add-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* Table */
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0px 0px 15px rgba(0,0,0,0.15);
+
+}
+
+th{
+
+    background:#2563eb;
+    color:white;
+    padding:15px;
+
+}
+
+td{
+
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+
+}
+
+tr:hover{
+
+    background:#f1f1f1;
+
+}
+
+footer{
+
+    text-align:center;
+    margin-top:40px;
+    color:gray;
+
+}
+.subtitle{
+    color:gray;
+    margin-bottom:30px;
+}
+.logout-btn{
+    background:#ef4444;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.logout-btn:hover{
+    background:#dc2626;
+}
+.button-container{
+    text-align:center;
+    margin-bottom:30px;
+}
+.user{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+</style>
+<body>
+
+    <header>
+
+        <h1>💰 Smart Expense Tracker</h1>
+
+        <div class="user">
+
+    <span>Welcome, Rishi</span>
+
+    <button class="logout-btn">
+    Logout
+    </button>
+
+</div>
+
+    </header>
+
+    <h2>Welcome Back, Rishi 👋</h2>
+
+    <p class="subtitle">
+    Manage your expenses efficiently.
+    </p>
+
+    <h2>Dashboard</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Total Expense</h3>
+            <p>₹{{ total }}</p>
+        </div>
+
+        <div class="card">
+            <h3>Monthly Expense</h3>
+            <p>₹8,500</p>
+        </div>
+
+        <div class="card">
+            <h3>Budget Left</h3>
+            <p>₹11,500</p>
+        </div>
+        <div class="card">
+            <h3>Total Transactions</h3>
+            <p>2</p>
+        </div>
+
+    </div>
+
+    <br>
+
+    <div class="button-container">
+
+    <a href="/add-expense" class="add-btn">
+    + Add Expense
+</a>
+
+</div>
+
+    <br><br>
+
+    <h2>Recent Transactions</h2>
+
+    <table border="1" cellspacing="0" cellpadding="10">
+
+        <tr>
+            <th>Date</th>
+            <th>Category</th>
+            <th>Amount</th>
+            <th>Description</th>
+            <th>Action</th>
+        </tr>
+
+        <tr>
+            <td>02-08-2026</td>
+            <td>Food</td>
+            <td>₹250</td>
+            <td>Pizza</td>
+            <td><button class="delete-btn">Delete</button></td>
+        </tr>
+
+        <tr>
+            <td>03-08-2026</td>
+            <td>Travel</td>
+            <td>₹120</td>
+            <td>Auto</td>
+            <td><button class="delete-btn">Delete</button></td>
+        </tr>
+
+    </table>
+    <br><br>
+    <a href="/view-expense" class="add-btn">View Expenses</a>
+    <footer>
+
+<p>© 2026 Smart Expense Tracker</p>
+
+</footer>
+
+</body>
+</html>
