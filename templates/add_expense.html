@@ -133,80 +133,80 @@ a:hover{
 
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>💰 Smart Expense Tracker</h1>
-    </header>
+<header>
+    <h1>💰 Smart Expense Tracker</h1>
+</header>
 
-    <!-- Expense Form Card -->
-    <div class="card">
+<div class="card">
 
-        <h2>Add New Expense</h2>
-        <p>Add your daily expenses here.</p>
+    <h2>Add New Expense</h2>
+    <p>Add your daily expenses here.</p>
 
-        <form action="/add-expense" method="post">
+    <form action="/add-expense" method="POST">
 
-            <!-- Category -->
-            <label for="category">Category</label><br>
-            <select id="category" name="category">
-                <option value="" selected disabled>Select Category</option>
-                <option value="Food">Food</option>
-                <option value="Travel">Travel</option>
-                <option value="Shopping">Shopping</option>
-                <option value="Education">Education</option>
-                <option value="Entertainment">Entertainment</option>
-                <option value="Health">Health</option>
-                <option value="Other">Other</option>
-            </select>
+        <label for="category">Category</label><br>
 
-            <br><br>
+        <select id="category" name="category" required>
+            <option value="" selected disabled>Select Category</option>
+            <option value="Food">Food</option>
+            <option value="Travel">Travel</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Education">Education</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Health">Health</option>
+            <option value="Other">Other</option>
+        </select>
 
-            <!-- Amount -->
-            <label for="amount">Amount (₹)</label><br>
-            <input
-                type="number"
-                id="amount"
-                name="amount"
-                placeholder="Enter Amount"
-                required
-            >
+        <br><br>
 
-            <br><br>
+        <label for="amount">Amount (₹)</label><br>
 
-            <!-- Date -->
-            <label for="date">Date</label><br>
-            <input
-                type="date"
-                id="date"
-                name="date"
-                required
-            >
+        <input
+            type="number"
+            id="amount"
+            name="amount"
+            placeholder="Enter Amount"
+            min="1"
+            step="0.01"
+            required>
 
-            <br><br>
+        <br><br>
 
-            <!-- Description -->
-            <label for="description">Description</label><br>
-            <textarea
-                id="description"
-                name="description"
-                rows="5"
-                placeholder="Enter Description"
-            ></textarea>
+        <label for="date">Date</label><br>
 
-            <br><br>
+        <input
+            type="date"
+            id="date"
+            name="date"
+            required>
 
-            <!-- Save Button -->
-            <button type="submit">
-                 Save Expense
-            </button>
+        <br><br>
 
-        </form>
+        <label for="description">Description</label><br>
 
-        <br>
+        <textarea
+            id="description"
+            name="description"
+            rows="5"
+            maxlength="200"
+            placeholder="Enter Description (Optional)">
+        </textarea>
 
-        <a href="/dashboard">← Back to Dashboard</a>
+        <br><br>
 
-    </div>
+        <button type="submit">
+            Save Expense
+        </button>
+
+    </form>
+
+    <br>
+
+    <a href="/dashboard">
+        ← Back to Dashboard
+    </a>
+
+</div>
 
 </body>
 </html>

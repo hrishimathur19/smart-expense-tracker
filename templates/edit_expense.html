@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edit Expense</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+header{
+    background:#2563eb;
+    color:white;
+    padding:20px 40px;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.container{
+    width:450px;
+    margin:50px auto;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 0 15px rgba(0,0,0,.15);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:25px;
+    color:#333;
+}
+
+label{
+    font-weight:bold;
+    color:#555;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:12px;
+    margin-top:8px;
+    margin-bottom:18px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+}
+
+textarea{
+    resize:none;
+    height:90px;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+.back-btn{
+    display:block;
+    text-align:center;
+    margin-top:18px;
+    text-decoration:none;
+    color:#2563eb;
+    font-weight:bold;
+}
+
+.back-btn:hover{
+    text-decoration:underline;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+💰 Smart Expense Tracker
+</header>
+
+<div class="container">
+
+<h2>Edit Expense</h2>
+
+<form action="/update/{{ expense[0] }}" method="POST">
+
+<label>Category</label>
+
+<select name="category">
+
+<option value="Food" {% if expense[2]=="Food" %}selected{% endif %}>Food</option>
+<option value="Travel" {% if expense[2]=="Travel" %}selected{% endif %}>Travel</option>
+<option value="Shopping" {% if expense[2]=="Shopping" %}selected{% endif %}>Shopping</option>
+<option value="Education" {% if expense[2]=="Education" %}selected{% endif %}>Education</option>
+<option value="Entertainment" {% if expense[2]=="Entertainment" %}selected{% endif %}>Entertainment</option>
+<option value="Health" {% if expense[2]=="Health" %}selected{% endif %}>Health</option>
+<option value="Other" {% if expense[2]=="Other" %}selected{% endif %}>Other</option>
+
+</select>
+
+<label>Amount</label>
+
+<input type="number" name="amount" value="{{ expense[3] }}" required>
+
+<label>Date</label>
+
+<input type="date" name="date" value="{{ expense[4] }}" required>
+
+<label>Description</label>
+
+<textarea name="description">{{ expense[5] }}</textarea>
+
+<button type="submit">
+Update Expense
+</button>
+
+</form>
+
+<a href="/view-expense" class="back-btn">
+← Back to Expense History
+</a>
+
+</div>
+
+</body>
+</html>

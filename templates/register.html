@@ -108,22 +108,22 @@ a:hover{
     <h3>Create Account</h3>
     <p class="tagline">Track your expenses efficiently.</p>
 
-    <form>
+    <form action="/register" method="POST">
 
         <label>Name</label>
-        <input type="text" placeholder="Enter Your Name">
+        <input type="text" name="name" placeholder="Enter Your Name"  required>
 
         <label>Username</label>
-        <input type="text" placeholder="Enter your Username">
+        <input type="text" name="username" placeholder="Enter your Username" required>
 
         <label>Email</label>
-        <input type="email" placeholder="Enter Your Email">
+        <input type="email" name="email" placeholder="Enter Your Email" required>
 
         <label>Password</label>
-        <input type="password" placeholder="Enter your Password">
+        <input type="password" name="password" placeholder="Enter your Password" required>
 
         <label>Confirm Password</label>
-        <input type="password" placeholder="Confirm Your Password">
+        <input type="password" name="confirm_password" placeholder="Confirm Your Password" required>
 
         <button type="submit">Register</button>
 

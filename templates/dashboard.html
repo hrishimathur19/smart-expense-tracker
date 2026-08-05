@@ -177,17 +177,15 @@ footer{
 
         <div class="user">
 
-    <span>Welcome, Rishi</span>
+    <span>Welcome, {{ session["username"] }}</span>
 
-    <button class="logout-btn">
-    Logout
-    </button>
+   <a href="/logout" class="logout-btn">Logout</a>
 
 </div>
 
     </header>
 
-    <h2>Welcome Back, Rishi 👋</h2>
+    <h2>Welcome Back {{ session["username"] }} 👋</h2>
 
     <p class="subtitle">
     Manage your expenses efficiently.
@@ -204,16 +202,20 @@ footer{
 
         <div class="card">
             <h3>Monthly Expense</h3>
-            <p>₹8,500</p>
+            <p>₹{{ monthly }}</p>
         </div>
 
         <div class="card">
             <h3>Budget Left</h3>
-            <p>₹11,500</p>
+            <p>{{ budget_left }}</p>
         </div>
         <div class="card">
             <h3>Total Transactions</h3>
-            <p>2</p>
+            <p>{{ transaction_count }}</p>
+        </div>
+        <div class="card">
+            <h3>Monthly Budget</h3>
+            <p>₹{{ budget }}</p>
         </div>
 
     </div>
@@ -224,6 +226,9 @@ footer{
 
     <a href="/add-expense" class="add-btn">
     + Add Expense
+</a>
+<a href="/set-budget" class="add-btn">
+    Set Budget
 </a>
 
 </div>
@@ -242,22 +247,20 @@ footer{
             <th>Action</th>
         </tr>
 
-        <tr>
-            <td>02-08-2026</td>
-            <td>Food</td>
-            <td>₹250</td>
-            <td>Pizza</td>
-            <td><button class="delete-btn">Delete</button></td>
-        </tr>
+        {% for expense in recent_expenses %}
 
-        <tr>
-            <td>03-08-2026</td>
-            <td>Travel</td>
-            <td>₹120</td>
-            <td>Auto</td>
-            <td><button class="delete-btn">Delete</button></td>
-        </tr>
+<tr>
+    <td>{{ expense[3] }}</td>
+    <td>{{ expense[1] }}</td>
+    <td>₹{{ expense[2] }}</td>
+    <td>{{ expense[4] }}</td>
+    <td>
+        <a href="/edit/{{ expense[0] }}" class="edit-btn">Edit</a>
+        <a href="/delete/{{ expense[0] }}" class="delete-btn">Delete</a>
+    </td>
+</tr>
 
+{% endfor %}
     </table>
     <br><br>
     <a href="/view-expense" class="add-btn">View Expenses</a>
