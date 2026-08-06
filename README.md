@@ -57,23 +57,7 @@ smart-expense-tracker/
 ├── static/
 │
 └── README.md
-```
 
----
-
-## 📸 Project Screenshots
-
-> Add screenshots of the following pages:
-
-- Login Page
-- Register Page
-- Dashboard
-- Add Expense
-- View Expenses
-- Set Budget
-- Edit Expense
-
----
 
 ## ⚙️ Installation
 
@@ -182,7 +166,7 @@ Through this project, I gained hands-on experience with:
 
 ## 👨‍💻 Developer
 
-**Rishi Mathur**
+**Hrishi Mathur**
 
 - GitHub: https://github.com/hrishimathur19
 
