@@ -142,43 +142,43 @@ Through this project, I gained hands-on experience with:
 
 ### Login Page
 
-![Login](assets/screenshots/login.png)
+![Login](assets/screenshots/login.jpeg)
 
 ---
 
 ### Register Page
 
-![Register](assets/screenshots/register.png)
+![Register](assets/screenshots/register.jpeg)
 
 ---
 
 ### Dashboard
 
-![Dashboard](assets/screenshots/dashboard.png)
+![Dashboard](assets/screenshots/dashboard.jpeg)
 
 ---
 
 ### Add Expense
 
-![Add Expense](assets/screenshots/add_expense.png)
+![Add Expense](assets/screenshots/addexp.jpeg)
 
 ---
 
 ### View Expenses
 
-![View Expenses](assets/screenshots/view_expense.png)
+![View Expenses](assets/screenshots/viewexp.jpeg)
 
 ---
 
 ### Edit Expense
 
-![Edit Expense](assets/screenshots/edit_expense.png)
+![Edit Expense](assets/screenshots/editexp.jpeg)
 
 ---
 
 ### Set Budget
 
-![Set Budget](assets/screenshots/set_budget.png)
+![Set Budget](assets/screenshots/budget.jpeg)
 
 ## 👨‍💻 Developer
 
