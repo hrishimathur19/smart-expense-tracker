@@ -170,9 +170,14 @@ Through this project, I gained hands-on experience with:
 
 - GitHub: https://github.com/hrishimathur19
 
+**Kinjal Mathur**
+
+- GitHub: https://github.com/Kinjal-mathur09
+
 Repository:
 
 https://github.com/hrishimathur19/smart-expense-tracker
+https://github.com/kinjal-mathur09/Smart_expense_tracker
 
 ---
 
