@@ -173,7 +173,7 @@ Through this project, I gained hands-on experience with:
 
 Repository:
 
-https://github.com/hrishimathur19/Smart_expense_tracker
+https://github.com/hrishimathur19/smart-expense-tracker
 
 ---
 
